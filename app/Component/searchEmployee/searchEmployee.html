@@ -1,0 +1,32 @@
+<div class="container">
+    <h3> Search Employee by Name or City</h3>
+    <div class="row">
+        <div class="col-xs-4">
+            <input type="text" class="input-md" placeholder="Name or city" ng-model="query" />
+        </div>
+    </div><br>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>PhoneNo</th>
+            <th>City</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>Postal Code</th>
+            </thead>
+            <tr data-ng-repeat="Emp in EmpList | filter: search" ng-click="BindSelectedData(Emp)">
+                <td>{{ Emp.id }}</td>
+                <td>{{ Emp.name }}</td>
+                <td>{{ Emp.phone | numberFilter}}</td>
+                <td>{{ Emp.address.city }}</td>
+                <td>{{ Emp.address.address_line1 }}</td>
+                <td>{{ Emp.address.address_line2 }}</td>
+                <td>{{ Emp.address.postal_code }}</td>
+
+            </tr>
+        </table>
+    </div>
+
+</div>

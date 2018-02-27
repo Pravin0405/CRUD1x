@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./app.js"></script>
+        <script src="./service/appDataService.js"></script>
+    <script src="./component/listEmployee/listEmployee.js"></script>
+    <script src="./component/searchEmployee/searchEmployee.js"></script>
+    <script src="./component/addEmployee/addEmployee.js"></script>
+
+    <script src="./filter/numberFilter.js"></script>
+</head>
+<body ng-app="app">
+            <div class="container">
+            <div class="row">
+                <button class="col-md-2" ui-sref="listEmployee">Employee List</button>
+                <button class="col-md-2" ui-sref="searchEmployee">Search Employee</button>
+                <button class="col-md-2" ui-sref="addEmployee">Add New Employee</button>
+            </div>
+                <div class="row">
+                    <div ui-view> </div>
+                </div>
+
+            </div>
+</body>
+</html>
